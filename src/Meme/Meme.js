@@ -1,5 +1,6 @@
 import React ,{useState,useEffect} from "react";
 import styles from "./styles.module.css";
+import {useHistory} from "react-router-dom";
 
 
 export const Meme =()=>{
@@ -7,6 +8,8 @@ export const Meme =()=>{
     const [memes,setMemes]=useState([]);
     const [memeIndex,setMemeIndex]=useState(0);
     const [captions,setCaptions]=useState([]);
+
+    const history= useHistory();
 
     useEffect(()=> {
         fetch("https://api.imgflip.com/get_memes").then(res=>{
@@ -63,7 +66,7 @@ export const Meme =()=>{
                 body: formData
             }).then(res=>{
                 res.json().then(res=>{
-                    console.log(res);
+                    history.push(`/generated?url=${res.data.url}`)
                 });
             });
       };

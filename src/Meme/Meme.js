@@ -1,6 +1,6 @@
 import React ,{useState,useEffect} from "react";
 import styles from "./styles.module.css";
-import {useHistory} from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 
 export const Meme =()=>{
@@ -64,9 +64,9 @@ export const Meme =()=>{
             fetch("https://api.imgflip.com/caption_image",{
                 method: 'POST',
                 body: formData
-            }).then(res=>{
-                res.json().then(res=>{
-                    history.push(`/generated?url=${res.data.url}`)
+            }).then(res => {
+                res.json().then(res => {
+                  history.push(`/generated?url=${res.data.url}`);
                 });
             });
       };

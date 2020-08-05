@@ -87,7 +87,7 @@ export const Meme =()=>{
 
          <img alt="meme" height="750px" width="500px" src={memes[memeIndex].url}></img>
         </div>
-        : <div>Hello</div>
+        : <div></div>
         
     );
 }

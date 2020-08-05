@@ -5,8 +5,9 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*background-image: url('./bg.jpg');*/
-  /*color: white;*/
+  background-image: url('./bg.jpg');
+  background-size: 1700px 800px;
+  color: white;
 }
 
 code {
